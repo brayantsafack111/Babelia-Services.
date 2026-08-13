@@ -1703,34 +1703,9 @@ a {
   display: none;
 }
 .cid-vhWP8qSZQ1 {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
   background-color: #0a1f4d;
-}
-.cid-vhWP8qSZQ1 .social-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.cid-vhWP8qSZQ1 .social-row .soc-item {
-  margin: 8px;
-}
-.cid-vhWP8qSZQ1 .social-row .soc-item a:hover .mbr-iconfont,
-.cid-vhWP8qSZQ1 .social-row .soc-item a:focus .mbr-iconfont {
-  background-color: #0a1f4d;
-}
-.cid-vhWP8qSZQ1 .social-row .soc-item a .mbr-iconfont {
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  font-size: 32px;
-  background-color: #ce9f4f;
-  color: #0a1f4d;
-  transition: all 0.3s ease-in-out;
 }
 .cid-vhWP8qSZQ1 .row-links {
   width: 100%;
