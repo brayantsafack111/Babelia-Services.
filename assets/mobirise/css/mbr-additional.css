@@ -820,8 +820,8 @@ a {
 }
 .cid-vhWN7uKebk .dropdown-item:hover,
 .cid-vhWN7uKebk .dropdown-item:focus {
-  background: #dd3116 !important;
-  color: white !important;
+  background: #ce9f4f !important;
+  color: #0a1f4d !important;
 }
 .cid-vhWN7uKebk .dropdown-item:hover span {
   color: white;
@@ -1271,7 +1271,7 @@ a {
 .cid-vhWQazzgLq {
   padding-top: 3rem;
   padding-bottom: 1rem;
-  background-color: #6ba7d4;
+  background-color: #eef1f8;
 }
 .cid-vhWQazzgLq .mbr-fallback-image.disabled {
   display: none;
@@ -1308,7 +1308,7 @@ a {
 .cid-vhWOiX9wEy {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: #6ba7d4;
+  background-color: #eef1f8;
 }
 .cid-vhWOiX9wEy img,
 .cid-vhWOiX9wEy .item-img {
@@ -1365,7 +1365,7 @@ a {
   margin-top: auto !important;
 }
 .cid-vhWOiX9wEy .mbr-section-title {
-  color: #ffffff;
+  color: #0a1f4d;
 }
 .cid-vhWOiX9wEy .mbr-text,
 .cid-vhWOiX9wEy .mbr-section-btn {
@@ -1621,7 +1621,7 @@ a {
 .cid-vhWPsES99W {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #6ba7d4;
+  background-color: #eef1f8;
 }
 .cid-vhWPsES99W .mbr-overlay {
   background-color: #ffffff;
@@ -1642,7 +1642,7 @@ a {
 .cid-vk5kbnARry {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #edefeb;
+  background-color: #faf5ea;
 }
 .cid-vk5kbnARry .mbr-fallback-image.disabled {
   display: none;
@@ -1705,7 +1705,7 @@ a {
 .cid-vhWP8qSZQ1 {
   padding-top: 3rem;
   padding-bottom: 1rem;
-  background-color: #000000;
+  background-color: #0a1f4d;
 }
 .cid-vhWP8qSZQ1 .social-row {
   display: flex;
@@ -1718,7 +1718,7 @@ a {
 }
 .cid-vhWP8qSZQ1 .social-row .soc-item a:hover .mbr-iconfont,
 .cid-vhWP8qSZQ1 .social-row .soc-item a:focus .mbr-iconfont {
-  background-color: #ffffff;
+  background-color: #0a1f4d;
 }
 .cid-vhWP8qSZQ1 .social-row .soc-item a .mbr-iconfont {
   width: 72px;
@@ -1728,8 +1728,8 @@ a {
   justify-content: center;
   border-radius: 100%;
   font-size: 32px;
-  background-color: #2fa5d7;
-  color: #000000;
+  background-color: #ce9f4f;
+  color: #0a1f4d;
   transition: all 0.3s ease-in-out;
 }
 .cid-vhWP8qSZQ1 .row-links {
@@ -1757,4 +1757,38 @@ a {
 }
 .cid-vhWP8qSZQ1 .mbr-section-title {
   color: #ffffff;
+}
+
+/* ===== Harmonisation couleurs de marque Nesia Consulting ===== */
+.text-primary {
+  color: #0a1f4d !important;
+}
+.cid-vhWP8qSZQ1 .text-primary {
+  color: #ce9f4f !important;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #0a1f4d;
+  border-color: #0a1f4d;
+}
+.btn-primary:hover {
+  color: #0a1f4d;
+  background-color: #ce9f4f;
+  border-color: #ce9f4f;
+}
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  color: #0a1f4d;
+  background-color: #ce9f4f;
+  border-color: #ce9f4f;
+  box-shadow: 0 0 0 .25rem rgba(10, 31, 77, .35);
+}
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary,
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #081733;
+  border-color: #081733;
 }
