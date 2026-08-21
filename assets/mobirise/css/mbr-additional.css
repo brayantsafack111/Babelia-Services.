@@ -1744,3 +1744,132 @@ a {
 .mbr-section-title {
   color: #0a1f4d;
 }
+
+/* ===== Nesia Consulting — interactions dynamiques ===== */
+
+/* Navbar : transition douce + ombre au scroll */
+.navbar.navbar-fixed-top {
+  transition: box-shadow 0.35s ease, padding 0.35s ease;
+}
+.nesia-navbar-scrolled {
+  box-shadow: 0 6px 24px rgba(10, 31, 77, 0.12);
+}
+.nesia-navbar-scrolled .navbar-logo img {
+  transition: height 0.35s ease;
+  height: 3.1rem !important;
+}
+
+/* Lien de navigation actif */
+.nav-link.nesia-active-link,
+.dropdown-item.nesia-active-link {
+  color: #0a1f4d !important;
+  font-weight: bold;
+}
+.navbar-nav > .nav-item > .nav-link {
+  position: relative;
+}
+.navbar-nav > .nav-item > .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ce9f4f;
+  transition: width 0.3s ease;
+}
+.navbar-nav > .nav-item > .nav-link:hover::after,
+.navbar-nav > .nav-item > .nav-link.nesia-active-link::after {
+  width: 100%;
+}
+
+/* Menu déroulant : ouverture animée en fondu + glissement */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  display: block;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+}
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Révélation au défilement */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-init.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Cartes de service : effet de survol dynamique */
+.cid-vhWOiX9wEy .slide-content {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 4px 18px rgba(10, 31, 77, 0.06);
+}
+.cid-vhWOiX9wEy .embla__slide:hover .slide-content {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(10, 31, 77, 0.16);
+}
+.cid-vhWOiX9wEy .item-wrapper img {
+  transition: transform 0.5s ease;
+}
+.cid-vhWOiX9wEy .embla__slide:hover .item-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Boutons : micro-interaction */
+.btn-primary {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(206, 159, 79, 0.35) !important;
+}
+
+/* Bouton retour en haut */
+.nesia-back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  border: none;
+  background: #0a1f4d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.25s ease;
+  box-shadow: 0 8px 20px rgba(10, 31, 77, 0.3);
+  z-index: 999;
+}
+.nesia-back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nesia-back-to-top:hover {
+  background: #ce9f4f;
+  color: #0a1f4d;
+}
