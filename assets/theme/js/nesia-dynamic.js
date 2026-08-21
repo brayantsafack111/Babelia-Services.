@@ -104,7 +104,36 @@
     });
   }
 
-  /* ---------- 4. Bouton retour en haut ---------- */
+  /* ---------- 4. Sous-menus : ouverture au survol (desktop) ---------- */
+  var isHoverCapable =
+    window.matchMedia &&
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  if (isHoverCapable && window.bootstrap) {
+    document
+      .querySelectorAll(".navbar-nav > .nav-item.dropdown")
+      .forEach(function (item) {
+        var toggle = item.querySelector(":scope > .dropdown-toggle");
+        if (!toggle) return;
+        var instance =
+          bootstrap.Dropdown.getInstance(toggle) ||
+          new bootstrap.Dropdown(toggle);
+        var closeTimer;
+
+        item.addEventListener("mouseenter", function () {
+          clearTimeout(closeTimer);
+          instance.show();
+          toggle.blur();
+        });
+        item.addEventListener("mouseleave", function () {
+          closeTimer = setTimeout(function () {
+            instance.hide();
+          }, 180);
+        });
+      });
+  }
+
+  /* ---------- 5. Bouton retour en haut ---------- */
   var backToTop = document.createElement("button");
   backToTop.type = "button";
   backToTop.setAttribute("aria-label", "Retour en haut de page");
