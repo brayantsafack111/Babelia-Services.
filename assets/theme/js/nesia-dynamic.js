@@ -104,12 +104,8 @@
     });
   }
 
-  /* ---------- 4. Sous-menus : ouverture au survol (desktop) ---------- */
-  var isHoverCapable =
-    window.matchMedia &&
-    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-
-  if (isHoverCapable && window.bootstrap) {
+  /* ---------- 4. Sous-menus : ouverture au survol (souris uniquement) ---------- */
+  if (window.bootstrap) {
     document
       .querySelectorAll(".navbar-nav > .nav-item.dropdown")
       .forEach(function (item) {
@@ -120,16 +116,30 @@
           new bootstrap.Dropdown(toggle);
         var closeTimer;
 
-        item.addEventListener("mouseenter", function () {
+        var isRealMouse = function (e) {
+          return !e.pointerType || e.pointerType === "mouse";
+        };
+
+        var enterHandler = function (e) {
+          if (!isRealMouse(e)) return;
           clearTimeout(closeTimer);
           instance.show();
           toggle.blur();
-        });
-        item.addEventListener("mouseleave", function () {
+        };
+        var leaveHandler = function (e) {
+          if (!isRealMouse(e)) return;
           closeTimer = setTimeout(function () {
             instance.hide();
           }, 180);
-        });
+        };
+
+        if (window.PointerEvent) {
+          item.addEventListener("pointerenter", enterHandler);
+          item.addEventListener("pointerleave", leaveHandler);
+        } else {
+          item.addEventListener("mouseenter", enterHandler);
+          item.addEventListener("mouseleave", leaveHandler);
+        }
       });
   }
 
