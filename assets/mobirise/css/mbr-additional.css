@@ -1768,20 +1768,6 @@ a {
 .navbar-nav > .nav-item > .nav-link {
   position: relative;
 }
-.navbar-nav > .nav-item > .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #ce9f4f;
-  transition: width 0.3s ease;
-}
-.navbar-nav > .nav-item > .nav-link:hover::after,
-.navbar-nav > .nav-item > .nav-link.nesia-active-link::after {
-  width: 100%;
-}
 
 /* Menu déroulant : ouverture animée en fondu + glissement */
 .dropdown-menu {
